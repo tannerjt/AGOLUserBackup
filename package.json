@@ -1,0 +1,23 @@
+{
+  "name": "agoluserbackup",
+  "version": "0.0.1",
+  "description": "Backup ArcGIS Online Users to a SQLite Database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerjt/AGOLUserBackup.git"
+  },
+  "keywords": [
+    "arcgis",
+    "agol"
+  ],
+  "author": "Joshua Tanner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tannerjt/AGOLUserBackup/issues"
+  },
+  "homepage": "https://github.com/tannerjt/AGOLUserBackup#readme"
+}
