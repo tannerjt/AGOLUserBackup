@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/tannerjt/AGOLUserBackup/issues"
   },
-  "homepage": "https://github.com/tannerjt/AGOLUserBackup#readme"
+  "homepage": "https://github.com/tannerjt/AGOLUserBackup#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
