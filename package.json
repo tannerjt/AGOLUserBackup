@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/tannerjt/AGOLUserBackup#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "request": "^2.88.0"
   }
 }
