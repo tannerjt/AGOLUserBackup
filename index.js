@@ -5,7 +5,11 @@ require('dotenv').load();
 
 getToken(process.env.USERNAME, process.env.PASSWORD)
 .then((resp) => {
-  getUsers(resp.token).then((resp) => {
-    console.log(resp.total);
+  getUsers(resp.token, writeToDB).then((status) => {
+    console.log('Completed!')
   })
 }, console.log);
+
+function writeToDB(users) {
+  console.log(users);
+}
