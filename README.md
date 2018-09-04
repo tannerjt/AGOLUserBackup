@@ -13,10 +13,12 @@ Having a local database of your ArcGIS Online Organization is useful.  For examp
 
 ## Setup
 
+1. Download or clone this repo onto your computer
+1. In project root, run `npm install`
 1. Edit .env.example and provide administrative account credentials and portal ID
-2. Rename .env.example to .env
-3. Run `node index.js`
-4. Enjoy
+1. Rename .env.example to .env
+1. Run `node index.js`
+1. Enjoy
 
 ## Useful SQL Queries
 
