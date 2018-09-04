@@ -55,6 +55,5 @@ order by lastLogin desc;
 /* Total number of users that have logged in in last 14 days */
 select count(username)
 from users
-WHERE datetime(lastLogin/1000, 'unixepoch') > datetime('now','-14 days')
-order by lastLogin desc;
+WHERE datetime(lastLogin/1000, 'unixepoch') > datetime('now','-14 days');
 ```
