@@ -43,4 +43,18 @@ where disabled = 1;
 select *
 from users
 where (availableCredits / assignedCredits) < 0.3;
+
+/* Active accounts that haven't logged in in last 6 months */
+select username, fullName, email, datetime(lastLogin/1000, 'unixepoch') as lastLogin
+from users
+where lastLogin > 0
+AND disabled = 0
+AND datetime(lastLogin/1000, 'unixepoch') < datetime('now','-6 months')
+order by lastLogin desc;
+
+/* Total number of users that have logged in in last 14 days */
+select count(username)
+from users
+WHERE datetime(lastLogin/1000, 'unixepoch') > datetime('now','-14 days')
+order by lastLogin desc;
 ```
