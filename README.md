@@ -17,3 +17,43 @@ Having a local database of your ArcGIS Online Organization is useful.  For examp
 2. Rename .env.example to .env
 3. Run `node index.js`
 4. Enjoy
+
+## Useful SQL Queries
+
+Personally, I use [JADE](https://github.com/sunnygoyal/jade) for working locally with SQLite.  
+
+```sql
+/* Total users in each role */
+SELECT role, count(role) as total_users
+FROM users
+GROUP BY role
+ORDER BY total_users desc;
+
+/* Total disabled accounts */
+select count(disabled) as 'Disabled Accounts'
+from users
+where disabled = 1;
+
+/* Total users who have never logged in */
+select count(disabled) as 'Disabled Accounts'
+from users
+where disabled = 1;
+
+/* Users with < 30% remaining credits */
+select *
+from users
+where (availableCredits / assignedCredits) < 0.3;
+
+/* Active accounts that haven't logged in in last 6 months */
+select username, fullName, email, datetime(lastLogin/1000, 'unixepoch') as lastLogin
+from users
+where lastLogin > 0
+AND disabled = 0
+AND datetime(lastLogin/1000, 'unixepoch') < datetime('now','-6 months')
+order by lastLogin desc;
+
+/* Total number of users that have logged in in last 14 days */
+select count(username)
+from users
+WHERE datetime(lastLogin/1000, 'unixepoch') > datetime('now','-14 days');
+```
