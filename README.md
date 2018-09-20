@@ -58,4 +58,10 @@ order by lastLogin desc;
 select count(username)
 from users
 WHERE datetime(lastLogin/1000, 'unixepoch') > datetime('now','-14 days');
+
+/* Using unique user tags, show number of users per tag */
+SELECT tag_primary, count(tags) as total
+FROM users
+GROUP BY tags
+ORDER BY total DESC
 ```
