@@ -60,8 +60,8 @@ from users
 WHERE datetime(lastLogin/1000, 'unixepoch') > datetime('now','-14 days');
 
 /* Using unique user tags, show number of users per tag */
-SELECT tag_primary, count(tags) as total
+SELECT tag_primary, count(tag_primary) as total
 FROM users
-GROUP BY tags
+GROUP BY tag_primary
 ORDER BY total DESC
 ```
