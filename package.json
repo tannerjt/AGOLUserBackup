@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/tannerjt/AGOLUserBackup#readme",
   "dependencies": {
-    "bluebird": "^3.5.1",
     "dotenv": "^6.0.0",
     "request": "^2.88.0",
     "sqlite3": "^4.0.2"
