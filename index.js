@@ -5,7 +5,7 @@ require('dotenv').load();
 
 getToken(process.env.USERNAME, process.env.PASSWORD)
 .then((resp) => {
-  storeUsers(resp.token, process.env.PORTALID).then((resp) => {
+  storeUsers(resp.token, process.env.PORTALID, process.env.PROLISTINGID).then((resp) => {
     console.log('completed!')
   })
 }, console.log);
