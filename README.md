@@ -16,6 +16,7 @@ Having a local database of your ArcGIS Online Organization is useful.  For examp
 1. Download or clone this repo onto your computer
 1. In project root, run `npm install`
 1. Edit .env.example and provide administrative account credentials and portal ID
+1. Add PRO listing ID to env (may need to do some investigative work to get this)
 1. Rename .env.example to .env
 1. Run `node index.js`
 1. Enjoy
